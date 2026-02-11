@@ -21,7 +21,7 @@ export default function Invitation() {
   };
 
   return (
-    <div className="min-h-screen bg-[url('/assets/bg-undangan.png')] bg-fixed bg-cover bg-center text-[#4a2d14] font-[Playfair_Display]">
+    <div className="min-h-screen bg-[url('/assets/bg-undangan-desktop.png')] bg-fixed bg-cover bg-center text-[#4a2d14] font-[Playfair_Display]">
       {/* ===== GERBANG PEMBUKA ===== */}
       <AnimatePresence>
         {!open && (
