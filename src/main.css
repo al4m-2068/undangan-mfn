@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+@font-face {
+    font-family: "Dbacks";
+    src: url("/assets/Dbacks.ttf");
+}
+@theme{
+    --font-dbacks: Dbacks, sans-serif;
+}

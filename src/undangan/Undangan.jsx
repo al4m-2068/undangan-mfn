@@ -15,11 +15,11 @@ export default function Invitation() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f6ead7] text-[#4a2d14] font-[Playfair_Display]">
+    <div className="min-h-screen bg-[url('/assets/bg-undangan.png')] bg-fixed bg-cover bg-center text-[#4a2d14] font-[Playfair_Display]">
       {/* ===== GERBANG PEMBUKA ===== */}
       <AnimatePresence>
         {!open && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#f6ead7] overflow-hidden">
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden">
             {/* Pintu kiri */}
             <motion.div
               initial={{ x: 0 }}
@@ -45,18 +45,16 @@ export default function Invitation() {
               onClick={() => setOpen(true)}
               className="relative z-50 cursor-pointer"
             >
-              <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#f3ddb0] to-[#caa04d] flex items-center justify-center font-bold shadow-2xl">
-                LOGO
-              </div>
+              <img src="/assets/MFNlogo.png" className="h-38" alt="" />
             </motion.div>
           </div>
         )}
       </AnimatePresence>
 
       {/* ===== ISI UNDANGAN ===== */}
-      <main className="max-w-4xl mx-auto px-6 py-24">
+      <main className="max-w-4xl mx-auto px-6 py-24 ">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: "-30" }}
           animate={open ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
           className="bg-[#fbf3e6] rounded-[36px] border border-[#e2c98b] shadow-[0_40px_90px_rgba(0,0,0,0.25)] px-10 py-16 md:px-20"
@@ -76,7 +74,7 @@ export default function Invitation() {
               Assalamu’alaikum Warahmatullahi Wabarakatuh
             </p>
 
-            <h1 className="text-5xl tracking-wider mb-4">MUNFEST 2.0</h1>
+            <h1 className="text-4xl/[170%] text-center font-dbacks mb-4">MUNFEST 2.0</h1>
             <p className="font-[Lora] text-lg text-[#7a4a25]">
               Pondok Tahfizh Plus IT Abudzar
             </p>
