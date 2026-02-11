@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../main.css";
 
 export default function Invitation() {
   const [open, setOpen] = useState(false);
+
+  const guestName = useMemo(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("to") || "Tamu Undangan";
+  }, []);
+
 
   const sectionVariant = {
     hidden: { opacity: 0, y: 40 },
@@ -83,8 +89,9 @@ export default function Invitation() {
 
             <p className="font-[Lora] leading-relaxed max-w-2xl mx-auto">
               Dengan penuh rasa hormat dan ta’zhim, kami segenap panitia
-              penyelenggara mengundang Asatidzah dan yayasan abudzar untuk berkenan hadir
-              dalam acara tahunan kami yaitu Munfest 2.0 .
+              penyelenggara mengundang <span className="font-semibold text-[#6b3a1e]">
+              {guestName}
+              </span> untuk berkenan hadir dalam acara tahunan kami yaitu Munfest 2.0.
             </p>
           </motion.section>
 
@@ -119,10 +126,12 @@ export default function Invitation() {
           >
             <h2 className="text-3xl mb-8">Permohonan Kehadiran</h2>
             <p className="font-[Lora] leading-relaxed max-w-2xl mx-auto">
-            Merupakan suatu kehormatan yang tak ternilai dan kebahagiaan yang mendalam bagi kami apabila  Asatidzah dan Yayasan Abu Dzar berkenan meluangkan waktu untuk hadir, memberikan doa terbaik, serta restu yang penuh keberkahan demi terselenggaranya MUNFEST 2.0 dengan lancar, khidmat, dan bermakna.
-
-            Kehadiran Asatidzah dan Yayasan Abu Dzar bukan sekadar partisipasi, melainkan cahaya dukungan yang akan menambah kemuliaan serta nilai pada setiap rangkaian acara yang kami selenggarakan.
+              Dengan penuh rasa hormat dan ta’zhim, kami segenap panitia
+              penyelenggara mengundang <span className="font-semibold text-[#6b3a1e]">
+              {guestName}
+              </span> untuk berkenan hadir dalam acara tahunan kami yaitu Munfest 2.0.
             </p>
+
           </motion.section>
 
           {/* PENUTUP */}
