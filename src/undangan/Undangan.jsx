@@ -61,7 +61,7 @@ export default function Invitation() {
           initial={{ opacity: 0, y: "-30" }}
           animate={open ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, delay: 0.8 }}
-          className="bg-[#fbf3e6] rounded-[36px] border border-[#e2c98b] shadow-[0_40px_90px_rgba(0,0,0,0.25)] px-10 py-16 md:px-20"
+          className="bg-[#fbf3e6] rounded-[36px] border border-[#e2c98b] shadow-[0_40px_90px_rgba(0,0,0,0.25)] px-10 py-10 md:px-20"
         >
 
           {/* PEMBUKA */}
@@ -69,7 +69,7 @@ export default function Invitation() {
             variants={sectionVariant}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.75 }}
             className="text-center mb-24"
           >
             <p className="text-xl text-[#c59a3d] mb-6 font-[Lora]">
@@ -99,10 +99,10 @@ export default function Invitation() {
             variants={sectionVariant}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
             className="mb-24"
           >
-            <h2 className="text-3xl text-center mb-10">Detail Acara</h2>
+            <h2 className="text-3xl text-center mb-10 font-dbacks uppercase">Detail Acara</h2>
 
             <div className="grid gap-6">
               <DetailCard icon="⏰" title="Waktu" value="20.00 WIB – Selesai" />
@@ -110,7 +110,7 @@ export default function Invitation() {
               <DetailCard
                 icon="📍"
                 title="Lokasi"
-                value="Pondok Tahfizh Plus IT Abudzar"
+                value="Lapangan Pondok Tahfizh Plus IT Abudzar"
               />
             </div>
           </motion.section>
@@ -120,10 +120,10 @@ export default function Invitation() {
             variants={sectionVariant}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
             className="mb-24 text-center"
           >
-            <h2 className="text-3xl mb-8">Permohonan Kehadiran</h2>
+            <h2 className="text-3xl mb-8 font-dbacks uppercase">Permohonan Kehadiran</h2>
             <p className="font-[Lora] leading-relaxed max-w-2xl mx-auto">
               Dengan segala kerendahan hati dan penuh rasa hormat, kami segenap panitia
               penyelenggara mengundang <span className="font-semibold text-[#6b3a1e]">
