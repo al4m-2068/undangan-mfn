@@ -26,21 +26,19 @@ export default function Invitation() {
       <AnimatePresence>
         {!open && (
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden">
-            {/* Pintu kiri */}
-            <motion.div
-              initial={{ x: 0 }}
-              exit={{ x: "-105%" }}
-              transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }}
-              className="absolute left-0 w-1/2 h-full bg-linear-to-b from-[#6b3a1e] to-[#3f1f0f] border-r-10 border-[#d6b36a]"
-            />
+            <motion.div 
+            initial={{ x: 0 }} 
+            exit={{ x: "-105%" }} 
+            transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }} 
+            className="absolute left-0 w-1/2 h-full bg-[url('/assets/bg-desktop-keri.png')] bg-contain bg-center border-r-10 border-[#d6b36a]" /> 
+            
+            {/* Pintu kanan */} 
+            <motion.div 
+            initial={{ x: 0 }} 
+            exit={{ x: "105%" }} 
+            transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }} 
+            className="absolute right-0 w-1/2 h-full bg-[url('/assets/bg-desktop-kanan.png')] bg-contain bg-center border-l-10 border-[#d6b36a]" />
 
-            {/* Pintu kanan */}
-            <motion.div
-              initial={{ x: 0 }}
-              exit={{ x: "105%" }}
-              transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }}
-              className="absolute right-0 w-1/2 h-full bg-linear-to-b from-[#6b3a1e] to-[#3f1f0f] border-l-10 border-[#d6b36a]"
-            />
 
             {/* Logo / kunci */}
             <motion.div
