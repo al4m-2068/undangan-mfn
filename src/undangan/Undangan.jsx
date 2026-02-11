@@ -25,7 +25,7 @@ export default function Invitation() {
               initial={{ x: 0 }}
               exit={{ x: "-105%" }}
               transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }}
-              className="absolute left-0 w-1/2 h-full bg-gradient-to-b from-[#6b3a1e] to-[#3f1f0f] border-r-[10px] border-[#d6b36a]"
+              className="absolute left-0 w-1/2 h-full bg-linear-to-b from-[#6b3a1e] to-[#3f1f0f] border-r-10 border-[#d6b36a]"
             />
 
             {/* Pintu kanan */}
@@ -33,7 +33,7 @@ export default function Invitation() {
               initial={{ x: 0 }}
               exit={{ x: "105%" }}
               transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }}
-              className="absolute right-0 w-1/2 h-full bg-gradient-to-b from-[#6b3a1e] to-[#3f1f0f] border-l-[10px] border-[#d6b36a]"
+              className="absolute right-0 w-1/2 h-full bg-linear-to-b from-[#6b3a1e] to-[#3f1f0f] border-l-10 border-[#d6b36a]"
             />
 
             {/* Logo / kunci */}
@@ -79,7 +79,7 @@ export default function Invitation() {
               Pondok Tahfizh Plus IT Abudzar
             </p>
 
-            <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-[#c59a3d] to-transparent mx-auto my-10" />
+            <div className="w-32 h-0.5 bg-linear-to-r from-transparent via-[#c59a3d] to-transparent mx-auto my-10" />
 
             <p className="font-[Lora] leading-relaxed max-w-2xl mx-auto">
               Dengan penuh rasa hormat dan ta’zhim, kami segenap panitia
