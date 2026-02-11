@@ -30,14 +30,14 @@ export default function Invitation() {
             initial={{ x: 0 }} 
             exit={{ x: "-105%" }} 
             transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }} 
-            className="absolute left-0 w-1/2 h-full bg-[url('/assets/bg-desktop-keri.png')] bg-contain bg-center border-r-10 border-[#d6b36a]" /> 
+            className="absolute left-0 w-1/2 h-full lg:bg-[url('/assets/bg-undangan-desktop-keri.png')] bg-cover bg-center border-r-10 border-[#d6b36a] sm:bg-[url('/assets/bg-undangan-hp-keri.png')]" /> 
             
             {/* Pintu kanan */} 
             <motion.div 
             initial={{ x: 0 }} 
             exit={{ x: "105%" }} 
             transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }} 
-            className="absolute right-0 w-1/2 h-full bg-[url('/assets/bg-desktop-kanan.png')] bg-contain bg-center border-l-10 border-[#d6b36a]" />
+            className="absolute right-0 w-1/2 h-full lg:bg-[url('/assets/bg-undangan-desktop-kanan.png')] bg-cover bg-center border-l-10 border-[#d6b36a] sm:bg-[url('/assets/bg-undangan-hp-kanan.png')]" />
 
 
             {/* Logo / kunci */}
@@ -60,9 +60,10 @@ export default function Invitation() {
         <motion.div
           initial={{ opacity: 0, y: "-30" }}
           animate={open ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.2, delay: 0.8 }}
           className="bg-[#fbf3e6] rounded-[36px] border border-[#e2c98b] shadow-[0_40px_90px_rgba(0,0,0,0.25)] px-10 py-16 md:px-20"
         >
+
           {/* PEMBUKA */}
           <motion.section
             variants={sectionVariant}
@@ -104,8 +105,8 @@ export default function Invitation() {
             <h2 className="text-3xl text-center mb-10">Detail Acara</h2>
 
             <div className="grid gap-6">
-              <DetailCard icon="⏰" title="Waktu" value="08.00 WIB – Selesai" />
-              <DetailCard icon="📅" title="Tanggal" value="14 (Februari & 2026)" />
+              <DetailCard icon="⏰" title="Waktu" value="20.00 WIB – Selesai" />
+              <DetailCard icon="📅" title="Tanggal" value="14 Februari 2026" />
               <DetailCard
                 icon="📍"
                 title="Lokasi"
@@ -133,10 +134,6 @@ export default function Invitation() {
               menjadi sebab keberkahan serta kelancaran dalam setiap rangkaian acara
               yang kami selenggarakan.
             </p>
-            <p className="font-semibold mt-10">
-              Hormat kami,
-            </p>
-            <p className="font-semibold">Panitia MUNFEST 2.0</p>
 
           </motion.section>
 
