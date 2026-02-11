@@ -88,10 +88,10 @@ export default function Invitation() {
             <div className="w-32 h-0.5 bg-linear-to-r from-transparent via-[#c59a3d] to-transparent mx-auto my-10" />
 
             <p className="font-[Lora] leading-relaxed max-w-2xl mx-auto">
-              Dengan penuh rasa hormat dan ta’zhim, kami segenap panitia
-              penyelenggara mengundang <span className="font-semibold text-[#6b3a1e]">
+              Dengan penuh rasa hormat, kami mengharapkan kehadiran <span className="font-semibold text-[#6b3a1e]">
               {guestName}
-              </span> untuk berkenan hadir dalam acara tahunan kami yaitu Munfest 2.0.
+              </span> pada acara MUNFEST 2.0 sebagai bentuk dukungan dan doa
+              restu demi terselenggaranya kegiatan ini dengan lancar dan penuh keberkahan.
             </p>
           </motion.section>
 
@@ -126,11 +126,19 @@ export default function Invitation() {
           >
             <h2 className="text-3xl mb-8">Permohonan Kehadiran</h2>
             <p className="font-[Lora] leading-relaxed max-w-2xl mx-auto">
-              Dengan penuh rasa hormat dan ta’zhim, kami segenap panitia
+              Dengan segala kerendahan hati dan penuh rasa hormat, kami segenap panitia
               penyelenggara mengundang <span className="font-semibold text-[#6b3a1e]">
               {guestName}
-              </span> untuk berkenan hadir dalam acara tahunan kami yaitu Munfest 2.0.
+              </span> untuk berkenan meluangkan waktu dan menghadiri acara tahunan kami,
+              MUNFEST 2.0. Kehadiran dan doa restu yang diberikan akan menjadi suatu
+              kehormatan serta kebahagiaan yang tak ternilai bagi kami, dan semoga
+              menjadi sebab keberkahan serta kelancaran dalam setiap rangkaian acara
+              yang kami selenggarakan.
             </p>
+            <p className="font-semibold mt-10">
+              Hormat kami,
+            </p>
+            <p className="font-semibold">Panitia MUNFEST 2.0</p>
 
           </motion.section>
 
