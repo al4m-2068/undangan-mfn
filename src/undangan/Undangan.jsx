@@ -7,7 +7,7 @@ export default function Invitation() {
 
   const guestName = useMemo(() => {
     const params = new URLSearchParams(window.location.search);
-    return params.get("to") || "Tamu Undangan";
+    return params.get("to") || "Yayasan Abu Dzar";
   }, []);
 
 
@@ -21,7 +21,7 @@ export default function Invitation() {
   };
 
   return (
-    <div className="min-h-screen bg-[url('/assets/bg-undangan-desktop.png')] bg-fixed bg-cover bg-center text-[#4a2d14] font-[Playfair_Display]">
+    <div className="min-h-screen bg-[url('/assets/bg-undangan.png')] lg:bg-[url('/assets/bg-undangan-desktop.png')] bg-fixed bg-cover bg-center text-[#4a2d14] font-dbacks">
       {/* ===== GERBANG PEMBUKA ===== */}
       <AnimatePresence>
         {!open && (
@@ -30,14 +30,14 @@ export default function Invitation() {
             initial={{ x: 0 }} 
             exit={{ x: "-105%" }} 
             transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }} 
-            className="absolute left-0 w-1/2 h-full lg:bg-[url('/assets/bg-undangan-desktop-keri.png')] bg-cover bg-center border-r-10 border-[#d6b36a] sm:bg-[url('/assets/bg-undangan-hp-keri.png')]" /> 
+            className="absolute left-0 w-1/2 h-full lg:bg-[url('/assets/bg-undangan-desktop-keri.png')] bg-cover bg-center border-r-10 border-[#d6b36a] bg-[url('/assets/bg-undangan-hp-keri.png')]" /> 
             
             {/* Pintu kanan */} 
             <motion.div 
             initial={{ x: 0 }} 
             exit={{ x: "105%" }} 
             transition={{ duration: 1.6, ease: [0.77, 0, 0.18, 1] }} 
-            className="absolute right-0 w-1/2 h-full lg:bg-[url('/assets/bg-undangan-desktop-kanan.png')] bg-cover bg-center border-l-10 border-[#d6b36a] sm:bg-[url('/assets/bg-undangan-hp-kanan.png')]" />
+            className="absolute right-0 w-1/2 h-full lg:bg-[url('/assets/bg-undangan-desktop-kanan.png')] bg-cover bg-center border-l-10 border-[#d6b36a] bg-[url('/assets/bg-undangan-hp-kanan.png')]" />
 
 
             {/* Logo / kunci */}
@@ -61,7 +61,7 @@ export default function Invitation() {
           initial={{ opacity: 0, y: "-30" }}
           animate={open ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, delay: 0.8 }}
-          className="bg-[#fbf3e6] rounded-[36px] border border-[#e2c98b] shadow-[0_40px_90px_rgba(0,0,0,0.25)] px-10 py-10 md:px-20"
+          className="bg-[#fbf3e6] rounded-[36px] border border-[#e2c98b] shadow-[0_40px_90px_rgba(0,0,0,0.25)] px-10 py-10 md:px-20 font-inter"
         >
 
           {/* PEMBUKA */}
@@ -70,23 +70,23 @@ export default function Invitation() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.75 }}
-            className="text-center mb-24"
+            className="text-center mb-24 font-inter"
           >
-            <p className="text-xl text-[#c59a3d] mb-6 font-[Lora]">
+            <p className="text-xl text-[#c59a3d] mb-6 ">
               بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
             </p>
-            <p className="font-[Lora] mb-10">
+            <p className=" mb-10">
               Assalamu’alaikum Warahmatullahi Wabarakatuh
             </p>
 
             <h1 className="text-4xl/[170%] text-center font-dbacks mb-4">MUNFEST 2.0</h1>
-            <p className="font-[Lora] text-lg text-[#7a4a25]">
+            <p className=" text-lg text-[#7a4a25]">
               Pondok Tahfizh Plus IT Abudzar
             </p>
 
             <div className="w-32 h-0.5 bg-linear-to-r from-transparent via-[#c59a3d] to-transparent mx-auto my-10" />
 
-            <p className="font-[Lora] leading-relaxed max-w-2xl mx-auto">
+            <p className=" leading-relaxed max-w-2xl mx-auto">
               Dengan penuh rasa hormat, kami mengharapkan kehadiran <span className="font-semibold text-[#6b3a1e]">
               {guestName}
               </span> pada acara MUNFEST 2.0 sebagai bentuk dukungan dan doa
@@ -102,10 +102,10 @@ export default function Invitation() {
             viewport={{ once: true, amount: 0.5 }}
             className="mb-24"
           >
-            <h2 className="text-3xl text-center mb-10 font-dbacks uppercase">Detail Acara</h2>
+            <h2 className="text-3xl/[170%] text-center mb-10 font-dbacks uppercase">Detail Acara</h2>
 
             <div className="grid gap-6">
-              <DetailCard icon="⏰" title="Waktu" value="20.00 WIB – Selesai" />
+              <DetailCard icon="⏰" title="Waktu" value="Ba'da Isya – Selesai" />
               <DetailCard icon="📅" title="Tanggal" value="14 Februari 2026" />
               <DetailCard
                 icon="📍"
@@ -123,8 +123,8 @@ export default function Invitation() {
             viewport={{ once: true, amount: 0.5 }}
             className="mb-24 text-center"
           >
-            <h2 className="text-3xl mb-8 font-dbacks uppercase">Permohonan Kehadiran</h2>
-            <p className="font-[Lora] leading-relaxed max-w-2xl mx-auto">
+            <h2 className="text-3xl/[170%] mb-8 font-dbacks uppercase">Permohonan Kehadiran</h2>
+            <p className=" leading-relaxed max-w-2xl mx-auto">
               Dengan segala kerendahan hati dan penuh rasa hormat, kami segenap panitia
               penyelenggara mengundang <span className="font-semibold text-[#6b3a1e]">
               {guestName}
@@ -145,7 +145,7 @@ export default function Invitation() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <p className="font-[Lora] mb-10">
+            <p className=" mb-10">
               Wassalamu’alaikum Warahmatullahi Wabarakatuh
             </p>
             <p className="font-semibold">Hormat kami,</p>
@@ -165,7 +165,7 @@ function DetailCard({ icon, title, value }) {
         {icon}
       </div>
       <div>
-        <p className="text-sm font-[Lora] uppercase">{title}</p>
+        <p className="text-sm  uppercase">{title}</p>
         <p className="font-semibold">{value}</p>
       </div>
     </div>
